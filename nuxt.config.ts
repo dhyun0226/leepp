@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint'
   ],
+  ui: {
+    icons: ['heroicons']
+  },
+  colorMode: {
+    classSuffix: ''
+  },
   content: {
     contentHead: false,
     highlight: {

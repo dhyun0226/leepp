@@ -1,4 +1,5 @@
 <script setup>
+import NavBar from '@/components/NavBar.vue'
 useHead({
   link: [
     {
@@ -11,6 +12,7 @@ useHead({
 
 <template>
   <UApp class="font-sans">
+    <NavBar />
     <NuxtPage />
   </UApp>
 </template>
