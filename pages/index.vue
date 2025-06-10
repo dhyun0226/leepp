@@ -4,6 +4,12 @@ const allPosts = await queryCollection('blog')
     .order('date', 'DESC')
     .all()
 
+const router = useRouter()
+
+function navigateToPost(path) {
+  router.push(path)
+}
+
 function formatDate(date) {
   if (!date) return '날짜 없음'
   return new Date(date).toLocaleDateString('en-US', {
@@ -24,7 +30,8 @@ function formatDate(date) {
     <UCard
         v-for="post in allPosts"
         :key="post.path"
-        class="hover:shadow-md transition"
+        class="hover:shadow-md transition cursor-pointer"
+        @click="navigateToPost(post.path)"
     >
       <template #header>
         <p class="text-gray-500 text-sm mb-1">
