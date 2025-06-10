@@ -22,5 +22,8 @@ export default defineNuxtConfig({
       theme: "github-dark",
     },
   },
-  css: ['~/assets/css/main.css']
+  css: [
+    'pretendard/dist/web/static/pretendard.css',
+    '~/assets/css/main.css'
+  ]
 })
