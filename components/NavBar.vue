@@ -25,7 +25,7 @@ function toggleTheme() {
 
         <!-- 다크모드 버튼 -->
         <button @click="toggleTheme" class="ml-4 text-gray-700 dark:text-gray-200 hover:text-purple-600">
-          <Icon :name="colorMode === 'dark' ? 'heroicons:moon' : 'heroicons:sun'" class="w-5 h-5" />
+          <Icon :name="colorMode.value === 'dark' ? 'heroicons:moon' : 'heroicons:sun'" class="w-5 h-5" />
         </button>
       </nav>
 
@@ -43,8 +43,8 @@ function toggleTheme() {
 
       <!-- 모바일에서도 다크모드 버튼 -->
       <button @click="toggleTheme" class="block text-gray-700 dark:text-gray-200 hover:text-purple-600">
-        <Icon :name="colorMode === 'dark' ? 'heroicons:moon' : 'heroicons:sun'" class="w-5 h-5" />
-        <span class="ml-2">{{ colorMode === 'dark' ? '다크모드' : '라이트모드' }}</span>
+        <Icon :name="colorMode.value === 'dark' ? 'heroicons:moon' : 'heroicons:sun'" class="w-5 h-5" />
+        <span class="ml-2">{{ colorMode.value === 'dark' ? '다크모드' : '라이트모드' }}</span>
       </button>
     </div>
   </header>
