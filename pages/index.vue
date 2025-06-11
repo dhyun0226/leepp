@@ -22,8 +22,8 @@ function formatDate(date) {
 
 <template>
     <div class="p-6">
-      <h1 class="text-sm text-red-600">Tailwind 테스트</h1>
-      <p class="text-sm text-gray-600 mt-2">이게 보이면 Tailwind는 정상입니다.</p>
+      <h1 class="text-sm text-red-600 dark:text-red-400">Tailwind 테스트</h1>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">이게 보이면 Tailwind는 정상입니다.</p>
     </div>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
@@ -34,18 +34,18 @@ function formatDate(date) {
         @click="navigateToPost(post.path)"
     >
       <template #header>
-        <p class="text-gray-500 text-sm mb-1">
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-1">
           {{ formatDate(post.date) }}
         </p>
         <NuxtLink :to="post.path">
-          <h2 class="text-lg font-semibold text-gray-900 hover:underline">
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:underline">
             {{ post.title }}
           </h2>
         </NuxtLink>
       </template>
 
       <template #default>
-        <p class="text-gray-600 text-sm leading-relaxed">
+        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
           {{ post.description || 'No description provided.' }}
         </p>
       </template>
